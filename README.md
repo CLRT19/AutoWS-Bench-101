@@ -1,4 +1,35 @@
 # AutoWS-Bench-101 🪑
+# Experiment log:
+run:
+python fwrench/applications/pipeline.py --dataset='cifar10' --embedding='openai' --lf_selector='snuba'
+
+python3 -m fwrench.applications.pipeline --dataset='cifar10' --embedding='openai' --lf_selector='snuba'
+
+
+2023-12-08 05:26:01 - [0.44091005 0.98104864 0.13306622 0.         0.22163755 0.94915612
+ 0.         0.11630366 0.25975661 0.37681464]
+2023-12-08 05:26:01 - [train] accuracy: 0.3477, coverage: 1.0000
+2023-12-08 05:26:01 - [0.71428571 1.         0.16666667 0.         0.30769231 1.
+ 0.         0.125      0.22222222 0.33333333]
+2023-12-08 05:26:01 - [valid] accuracy: 0.4300, coverage: 1.0000
+2023-12-08 05:26:01 - [0.46  0.986 0.143 0.    0.229 0.948 0.    0.133 0.254 0.361]
+2023-12-08 05:26:01 - [test] accuracy: 0.3514, coverage: 1.0000
+2023-12-08 05:26:01 - label model train acc:    0.3514
+2023-12-08 05:26:01 - label model coverage:     1.0
+
+
+run 2
+2023-12-08 11:04:34 - [0.44196335 0.98083807 0.13116828 0.         0.22058514 0.9521097
+ 0.         0.03383379 0.25933697 0.37723543]
+2023-12-08 11:04:34 - [train] accuracy: 0.3395, coverage: 1.0000
+2023-12-08 11:04:34 - [0.71428571 1.         0.16666667 0.         0.30769231 1.
+ 0.         0.125      0.22222222 0.33333333]
+2023-12-08 11:04:34 - [valid] accuracy: 0.4300, coverage: 1.0000
+2023-12-08 11:04:34 - [0.462 0.986 0.14  0.    0.231 0.95  0.    0.044 0.254 0.362]
+2023-12-08 11:04:34 - [test] accuracy: 0.3429, coverage: 1.0000
+2023-12-08 11:04:34 - label model train acc:    0.3429
+2023-12-08 11:04:34 - label model coverage:     1.0
+0.3429
 
 ## Introduction
 **AutoWS-Bench-101** is a framework for evaluating automated WS (AutoWS) techniques in challenging WS settings---a set of diverse application domains on which it has been previously difficult or impossible to apply traditional WS techniques.
