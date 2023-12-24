@@ -1,5 +1,10 @@
 # AutoWS-Bench-101 🪑
 # Experiment log:
+
+## Current taks:
+Compare logistic regression trained on the original 100 example with clip features, with the logistic regression trained on the 100 example + clip trained on the 100 example + examples labeled by snuba 
+
+
 run:
 python fwrench/applications/pipeline.py --dataset='cifar10' --embedding='openai' --lf_selector='snuba'
 

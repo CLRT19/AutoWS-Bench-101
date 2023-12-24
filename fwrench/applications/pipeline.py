@@ -266,6 +266,7 @@ def main(
 
     # TODO swtich to test set
     acc = accuracy_score(test_covered.labels, hard_labels)
+    save_labels_to_file(hard_labels, 'hard_labels.csv')
     cov = float(len(test_covered.labels)) / float(len(test_data.labels))
     logger.info(f"label model train acc:    {acc}")
     logger.info(f"label model coverage:     {cov}")
@@ -286,6 +287,15 @@ def main(
     ################ PROFIT 🤑 #################################################
     return acc
 
+def save_labels_to_file(labels, file_name):
+    """
+    Save the labels to a CSV file.
+    :param labels: The labels to be saved.
+    :param file_name: The name of the file to save the labels in.
+    """
+    np.savetxt(file_name, labels, delimiter=",", fmt='%d')
+
+    print(f"Labels saved to {file_name}")
 
 if __name__ == "__main__":
     fire.Fire(main)
